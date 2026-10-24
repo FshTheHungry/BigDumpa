@@ -7,12 +7,12 @@ package frc.robot.subsystems;
 import frc.robot.Constants.OperatorConstants;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
+import edu.wpi.first.wpilibj.motorcontrol.Spark;
 
 public class ArmSubsystem extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
 
-  private final PWMSparkMax shootMotor = new PWMSparkMax(OperatorConstants.armMotorID);
+  private final Spark shootMotor = new Spark(OperatorConstants.armMotorID);
 
   public ArmSubsystem() {
 

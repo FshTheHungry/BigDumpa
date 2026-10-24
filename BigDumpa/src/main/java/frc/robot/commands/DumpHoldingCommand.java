@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class DumpHoldingCommand extends Command {
   private final DumpSubsystem dump;
-  private final double holdingPower = -0.1;
+  private final double holdingPower = 0.25;
 
   /**
    * Creates a new DumpHoldingCommand.

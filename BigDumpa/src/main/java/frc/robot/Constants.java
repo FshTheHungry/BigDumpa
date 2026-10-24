@@ -16,12 +16,12 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
 
-    public static final int rightDriveMotorPort = 0;
+    public static final int rightDriveMotorPort = 2;
     public static final int rightDriveMotorFollowerPort = 1;
-    public static final int leftDriveMotorPort = 2;    
+    public static final int leftDriveMotorPort = 4;    
     public static final int leftDriveMotorFollowerPort = 3;
 
-    public static final int dumpMotorID = 4;
+    public static final int dumpMotorID = 0;
     public static final int armMotorID = 5;
     public static final int intakeMotorID = 6;
   }

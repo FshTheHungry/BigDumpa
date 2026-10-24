@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class ArmOutCommand extends Command {
   private final ArmSubsystem arm;
-  private final double power = -0.10;
+  private final double power = 0.40;
 
   /**
    * Creates a new ArmOutCommand.

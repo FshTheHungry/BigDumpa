@@ -29,7 +29,7 @@ public class DriveSubsystem extends SubsystemBase {
     leftMotorLeader.addFollower(leftMotorFollower);
     rightMotorLeader.addFollower(rightMotorFollower);
 
-    rightMotorLeader.setInverted(true);
+    rightMotorLeader.setInverted(false);
   }
 
   public void arcadeDrive(double fwd, double rot) {

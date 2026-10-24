@@ -7,11 +7,11 @@ package frc.robot.subsystems;
 import frc.robot.Constants.OperatorConstants;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
+import edu.wpi.first.wpilibj.motorcontrol.Spark;
 
 public class IntakeSubsystem extends SubsystemBase {
 
-  private final PWMSparkMax intakeMotor = new PWMSparkMax(OperatorConstants.intakeMotorID);
+  private final Spark intakeMotor = new Spark(OperatorConstants.intakeMotorID);
 
   public IntakeSubsystem() {
 

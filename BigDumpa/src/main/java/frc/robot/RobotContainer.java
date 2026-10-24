@@ -6,6 +6,7 @@ package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.ArmInCommand;
+import frc.robot.commands.ArmOutCommand;
 import frc.robot.commands.Autos;
 import frc.robot.commands.DefaultDrive;
 import frc.robot.commands.DumpCommand;
@@ -48,8 +49,8 @@ public class RobotContainer {
       // hand, and turning controlled by the right.
       new DefaultDrive(
         drivesubsystem,
-          () -> -driverController.getLeftY(),
-          () -> -driverController.getRightX()
+          () -> driverController.getLeftY(),
+          () -> driverController.getRightX()
         )
     );
 
@@ -57,9 +58,6 @@ public class RobotContainer {
       new DumpHoldingCommand(dumpsubsystem)
     );
 
-    armsubsystem.setDefaultCommand(
-      new ArmInCommand(armsubsystem)
-    );
 
 
   }
@@ -75,8 +73,14 @@ public class RobotContainer {
    */
   private void configureBindings() {
     driverController.rightTrigger().whileTrue(new DumpCommand (dumpsubsystem));
+
+    driverController.leftBumper().whileTrue(new ArmOutCommand(armsubsystem));
+    driverController.rightBumper().whileTrue(new ArmInCommand(armsubsystem));
+    
+    
     driverController.leftTrigger().whileTrue(new IntakeInCommand (intakesubsystem));
-    driverController.leftBumper().whileTrue(new IntakeOutCommand(intakesubsystem));
+    driverController.leftTrigger().whileTrue(new ArmOutCommand(armsubsystem));
+    driverController.a().whileTrue(new IntakeOutCommand(intakesubsystem));
   }
 
   /**

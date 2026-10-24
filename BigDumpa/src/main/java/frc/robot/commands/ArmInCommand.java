@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class ArmInCommand extends Command {
   private final ArmSubsystem arm;
-  private final double holdingPower = 0.10;
+  private final double holdingPower = -0.40;
 
   /**
    * Creates a new ArmInCommand.

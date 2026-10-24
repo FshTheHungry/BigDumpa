@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class IntakeOutCommand extends Command {
   private final IntakeSubsystem intake;
-  private final double power = -0.10;
+  private final double power = 0.60;
 
   /**
    * Creates a new IntakeOutCommand.
